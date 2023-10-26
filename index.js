@@ -120,7 +120,7 @@ function displaySuperHeros(result){
         let {id, thumbnail, name, description}=element
 
         let color=''
-        if(favouriteSuperheros[id]){
+        if(favouriteSuperheros && favouriteSuperheros[id]){
             color='goldenrod'
         }
         else{
