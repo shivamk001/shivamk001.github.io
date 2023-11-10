@@ -3,73 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Stopwatch</title>
     <script src="https://kit.fontawesome.com/ca58c8957e.js" crossorigin="anonymous"></script>
-    <script src="
-    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js
-    "></script>
-    <link href="
-    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css
-    " rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="SuperHeroHunter.ico">
     <link rel="stylesheet" href="style.css">
-    
-    <title>Marval Superheros Hunter</title>
 </head>
 <body>
-    <div class="navbar">
-        <!-- <img href="https://static.vecteezy.com/system/resources/previews/019/550/621/original/marvel-logo-free-download-free-vector.jpg"/> -->
-        <img src="SuperHeroHunter.png" style="height: 100%; margin-left: 10px; margin-top: 10px;"/>
-        <div class="navbarButtonDiv" id="navbarButtonDiv">
-            <a href="index.html" id="displayFavourites" class="navbarButton tooltip-icon"><i class="fa-solid fa-house fa-xl" style="color: aliceblue;"></i></a>
-            <div class="tooltip" style="top: 10%; left: 90%; width: 10%;">Go to home page</div>
-            <a href="favourites.html" id="displayFavourites" class="navbarButton tooltip-icon" target="_blank"><i class="fa-regular fa-star fa-xl" style="color: aliceblue;"></i></a>
-            <div class="tooltip" style="top: 10%; left: 90%; width: 10%;">Go to favourites page</div>
-            <button id="displaySearchButton" type="button" class="navbarButton tooltip-icon"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: aliceblue;"></i></button>
-            <div class="tooltip" style="top: 10%; left: 90%; width: 10%;">Open search bar</div>
+    <h1>STOPWATCH</h1>
+    <div class="main">
+        <div class="watch">
+
+            <div class="inner_main">
+                    <div id="minute">
+                        <div class="font">Min</div>
+                        <div class="font">00</div>
+                    </div>
+                    <div id="colon">
+                        <div class="font">&nbsp;</div>
+                        <div class="font" >:</div>
+                    </div>
+                    <div id="second">
+                        <div class="font">Sec</div>
+                        <div class="font" >00</div>
+                    </div>
+            </div>
+
+            <div id="arm" class="arm">
+                <div id="pivot" class="pivot"></div>
+            </div>
+
+            <div id="zero">
+            </div>
+            <div id="three">
+            </div>
+            <div id="six">
+            </div>
+            <div id="nine">
+            </div>
+            <div style="position: absolute;top: 10%; left: 49%; color: #74F0ED;">0</div>
+            <div style="position: absolute;top: 48%; left: 85%;color: #74F0ED;">15</div>
+            <div style="position: absolute;top: 85%; left: 48%;color: #74F0ED;">30</div>
+            <div style="position: absolute;top: 48%; left: 10%;color: #74F0ED;">45</div>
+        </div>
+
+        <div class="buttons">
+            <div id="startDiv" style="height: 100%; width: 10%;  position: relative;">
+                <button id="start" class="button">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <div id="playCloud" class="cloud">
+                    Play
+                </div> 
+            </div>
+
+
+            <div id="resetDiv" style="height: 100%; width: 10%; position: relative;">
+                <button id="reset" class="button">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+                <div id="resetCloud" class="cloud">
+                    Reset
+                </div> 
+            </div>
+
         </div>
     </div>
 
-    <div id="searchBarDiv" class="searchBarDiv">
-        <input id='searchBar-input' class="searchBar" type="text" placeholder="SEARCH FOR YOUR FAVOURITE SUPERHERO"/>
-        
-        
-        <div style="display: flex;">
-            <select id="order-by-select" class="order-by tooltip-icon">
-                <option hidden selected value>Order By</option>
-                <option>name</option>
-                <option>modified</option>
-                <option>-name</option>
-                <option>-modified</option>
-            </select>
-            <span class="tooltip" style="top: 20%; left: 65%; width: auto;">Order By</span>
-    
-            <button id='searchBar-clear' class="searchBar-button">
-                <i class="fa-solid fa-x fa-sm tooltip-icon" style="color: aliceblue;"></i>
-                <span class="tooltip" style="top: 20%; left: 70%; width: auto;">Clear text input</span>
-            </button>
-    
-            <button id='searchBar-submit' class="searchBar-button">
-                <i class="fa-solid fa-magnifying-glass fa-sm tooltip-icon" style="color: aliceblue;"></i>
-                <span class="tooltip" style="top: 20%; left: 70%; width: auto;">Search Button</span>
-            </button>
-        </div>
-
-
-
-    </div>
-
-    <div class="result-container" id="mainContainer">
-        <h1 id="result-container-heading" class="result-container-heading" style="color: aliceblue; text-align: center; font-weight: bold;">ALL SUPERHEROS</h1>
-        <div id="superhero-cards-container" class="cards-container">
-        </div>
-    </div>
-    <div class="pagination-box">
-
-    </div>
-
-    <div id="header"></div>
-    <div class="page"></div>
-    <script src="index.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
