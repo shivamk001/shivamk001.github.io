@@ -1,14 +1,22 @@
 body{
     font-family: sans-serif;
-    /* background-color: blue;
-} */
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A244A;
+}
+
+h1{
+    color: white;
 }
 .main{
-    position: relative;
-    top: 50%;
-    left: 35%;
-    width: 25vw;
-    height: 25vw;
+    width: 50vh;
+    height: 50vh;
     border:2px solid red;
     display: flex;
     flex-direction: column;
@@ -46,8 +54,10 @@ body{
     position: absolute;
     top: 100%;
     left: 0%;
-    height: 1px;
-    width: 1px;
+    /* height: 1px;
+    width: 1px; */
+    height: 1%;
+    width: 1%;
     border: 2px solid #EA445A;
     border-radius: 50%;
 }
@@ -126,39 +136,100 @@ body{
 }
 
 .font{
-    font-size: 100%;
     text-align: center;
 }
 
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    height: 10%;
+}
+
+
 .button{
-    height: 30px;
-    width: 30px;
+    /* height: 30px;
+    width: 30px; */
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     color: forestgreen;
     background-color: black;
-    position: relative;
-    border: 2px solid #EA445A;
+    /* position: relative; */
+    border: 1px solid #EA445A;
+    cursor: pointer;
 }
 
 .button i{
     color: #74F0ED;
 }
 #reset{
-    margin-left: 10px;
+    margin-left: 15%;
 }
 
 .cloud{
     color: #74F0ED;
-    position: absolute;
-    top: 150%;
-    left: 0%;
+    /* visibility: hidden; */
     display: none;
     border: 1px solid black;
     background-color: #000000;
     padding: 5px;
-    border-radius: 1rem;
+    border-radius: 6px;
+    height: auto;
+    width: auto;
+    /* z-index: 100; */
+
+    position: absolute;
+    top: 110%;
 }
 
-.button:hover .cloud{
-    display: flex;
+
+#startDiv:hover .cloud{
+    /* visibility: visible; */
+    display: block;
+}
+
+#resetDiv:hover .cloud{
+    /* visibility: visible; */
+    display: block;
+}
+
+
+@media screen and (min-height: 300px) {
+    body{
+        font-size: x-small;
+    }
+    
+}
+
+@media screen and (min-height: 500px) {
+    body{
+        font-size: small;
+    }
+    
+}
+
+@media screen and (min-height: 700px) {
+    body{
+        font-size: large;
+    }
+    
+}
+
+@media screen and (min-height: 900px) {
+    body{
+        font-size: x-large;
+    }
+    
+}
+
+@media screen and (min-height: 1100px) {
+    body{
+        font-size: xx-large;
+    }
+    
 }
