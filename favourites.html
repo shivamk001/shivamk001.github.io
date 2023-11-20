@@ -12,9 +12,9 @@
     https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css
     " rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="SuperHeroHunter.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleFavs.css">
     
-    <title>Marval Superheros Hunter</title>
+    <title>Favourite Marval Superheros</title>
 </head>
 <body>
     <div class="navbar">
@@ -25,8 +25,6 @@
             <div class="tooltip" style="top: 10%; left: 90%; width: 10%;">Go to home page</div>
             <a href="favourites.html" id="displayFavourites" class="navbarButton tooltip-icon" target="_blank"><i class="fa-regular fa-star fa-xl" style="color: aliceblue;"></i></a>
             <div class="tooltip" style="top: 10%; left: 90%; width: 10%;">Go to favourites page</div>
-            <button id="displaySearchButton" type="button" class="navbarButton tooltip-icon"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: aliceblue;"></i></button>
-            <div class="tooltip" style="top: 10%; left: 90%; width: 10%;">Open search bar</div>
         </div>
     </div>
 
@@ -34,34 +32,29 @@
         <input id='searchBar-input' class="searchBar" type="text" placeholder="SEARCH FOR YOUR FAVOURITE SUPERHERO"/>
         
         
-        <div style="display: flex;">
-            <select id="order-by-select" class="order-by tooltip-icon">
-                <option hidden selected value>Order By</option>
-                <option>name</option>
-                <option>modified</option>
-                <option>-name</option>
-                <option>-modified</option>
-            </select>
-            <span class="tooltip" style="top: 20%; left: 65%; width: auto;">Order By</span>
-    
-            <button id='searchBar-clear' class="searchBar-button">
-                <i class="fa-solid fa-x fa-sm tooltip-icon" style="color: aliceblue;"></i>
-                <span class="tooltip" style="top: 20%; left: 70%; width: auto;">Clear text input</span>
-            </button>
-    
-            <button id='searchBar-submit' class="searchBar-button">
-                <i class="fa-solid fa-magnifying-glass fa-sm tooltip-icon" style="color: aliceblue;"></i>
-                <span class="tooltip" style="top: 20%; left: 70%; width: auto;">Search Button</span>
-            </button>
-        </div>
+        <select id="order-by-select" class="order-by">
+            <option value="">Order By</option>
+            <option>name</option>
+            <option>modified</option>
+            <option>-name</option>
+            <option>-modified</option>
+        </select>
 
+
+        <button id='searchBar-clear' class="searchBar-button">
+            <i class="fa-solid fa-x fa-2xl" style="color: aliceblue;"></i>
+        </button>
+
+        <button id='searchBar-submit' class="searchBar-button">
+            <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: aliceblue;"></i>
+        </button>
 
 
     </div>
 
-    <div class="result-container" id="mainContainer">
-        <h1 id="result-container-heading" class="result-container-heading" style="color: aliceblue; text-align: center; font-weight: bold;">ALL SUPERHEROS</h1>
-        <div id="superhero-cards-container" class="cards-container">
+    <div class="main-container" id="mainContainer">
+        <h1 id="result-container-heading" class="result-container-heading" style="color: aliceblue; text-align: center; font-weight: bold;">ALL FAVOURITE SUPERHEROS</h1>
+        <div id="superhero-cards-container" class="superhero-cards-container">
         </div>
     </div>
     <div class="pagination-box">
@@ -70,6 +63,7 @@
 
     <div id="header"></div>
     <div class="page"></div>
-    <script src="index.js"></script>
+    <!-- <script src="index.js" type="module"></script> -->
+    <script src="favourites.js"></script>
 </body>
 </html>
