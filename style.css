@@ -4,6 +4,8 @@
 body{
     margin: 0;
     font-family: sans-serif;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 #body-header{
@@ -13,6 +15,8 @@ body{
     background-position: center;
     background-attachment: fixed;
     padding-top: 1.2rem;    
+
+    width: 100%;
 }
 
 .horizontal-list{
