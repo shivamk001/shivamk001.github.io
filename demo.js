@@ -82,17 +82,17 @@ educationLink.addEventListener('click', function(event){
 })
 
 
-const contactLink=document.getElementById('a#contact')
-contactLink.addEventListener('click', function(event){
-    event.preventDefault()
-    var contactSection=document.getElementById('contact')
-    var targetPos=contactSection.getBoundingClientRect().y
-    const myInterval=setInterval(function(){
-        if(targetPos<=0){
-            clearInterval(myInterval)
-            return;
-        }
-        window.scrollBy(0, 50)
-        targetPos=contactSection.getBoundingClientRect().y
-    }, 20)
-})
+// const contactLink=document.getElementById('a#contact')
+// contactLink.addEventListener('click', function(event){
+//     event.preventDefault()
+//     var contactSection=document.getElementById('contact')
+//     var targetPos=contactSection.getBoundingClientRect().y
+//     const myInterval=setInterval(function(){
+//         if(targetPos<=0){
+//             clearInterval(myInterval)
+//             return;
+//         }
+//         window.scrollBy(0, 50)
+//         targetPos=contactSection.getBoundingClientRect().y
+//     }, 20)
+// })
