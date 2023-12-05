@@ -1,0 +1,46 @@
+body{
+    margin: 0%;
+    overflow: hidden;
+}
+.rod{
+    width: 33%;
+    height: 20px;
+    border-radius: 1.5rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rod div{
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.ball{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+#lower{
+    background-color: aqua;
+    position: absolute;
+    top: 97%;
+    left: 33%;
+}
+
+#upper{
+    background-color: olive;
+    position: absolute;
+    top: 0%;
+    left: 33%;
+}
