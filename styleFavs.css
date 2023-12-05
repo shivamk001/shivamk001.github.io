@@ -1,0 +1,470 @@
+*{
+    /* font-family: "Roboto","Trebuchet MS",Helvetica,Arial,sans-serif; */
+    /* font-family: 'Avengeance Heroic Avenger', sans-serif; */
+    font-family: "Roboto","Trebuchet MS",Helvetica,Arial,sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black;  For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #020107 , #221b1b); /*#151515*/
+
+}
+
+/* CSS FOR NAVIGATION BAR */
+.navbar{    
+    /* background-color: black;  For browsers that do not support gradients  */
+    background-image: linear-gradient(to right, #020107 , #221b1b);/*to right*/
+    text-align: center;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.navbarButtonDiv{
+    border: 2px solid aliceblue;
+    height: auto;
+    width: 10%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 1%;
+    background-color: #221b1b;
+}
+
+.navbarButton{
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 7%;
+}
+
+/* CSS FOR SEARCH BAR */
+.searchBarDiv{
+    visibility: hidden;
+    display: none;
+    flex-direction: row;
+    align-items: stretch;
+    height: 40px;
+    border: 1px solid lightslategray;
+    border-radius: 1.5rem;
+    width: 40%;
+    border: 2px solid aliceblue;
+    margin-top: 10px;
+}
+
+.searchBar{
+    width: 80%;
+    border: none;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    background-color: transparent;
+    color: white;
+    
+}
+
+/* CSS FOR SEARCH BUTTON AND X BUTTON IN SEARCH BAR */
+.searchBar-button{
+    background-color: white;
+    width: 25%; 
+    border: none;
+    border-left: 1px solid lightgray;
+    padding: 0;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    background-color: transparent;
+    color: white;
+}
+
+
+.searchBar-button :hover{
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+}
+
+input::placeholder{
+    color: lightgrey;
+    text-align: center;
+    font-size: 1rem;
+    /* line-height: 1.5; */
+}
+
+/* CSS FOR ORDER SELECT TAG IN SEARCHBAR */
+.order-by{
+    padding: 10px;
+    /* width: 80%; */
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-left: 1px solid lightgray;
+    /* margin-top: 20px; */
+}
+.order-by  option{
+    color: white;
+    background-color: black;
+}
+
+
+/* TOOLTIP CSS */
+.tooltip-icon {
+    position: relative;
+    cursor: pointer;
+  }
+
+.tooltip{
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 1rem;
+    top: 150%; /* Adjust the top value to position the tooltip relative to the icon */
+    left: 60%; /* Adjust the left value to center the tooltip */
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+    z-index: 1;
+    width: 50%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tooltip-icon:hover + .tooltip {
+    display: block;
+}
+
+/* CSS FOR THE CONTAINER WHICH CONTAINS ALL THE SUPERHERO H1 AND CONTAINER */
+.main-container{
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container h2{
+    color: #000;
+    text-align: center;
+}
+
+/* THE CONTAINER WHICH CONTAINS THE SUPERHERO CARDS */
+.superhero-cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
+    flex-wrap: wrap;
+    
+}
+
+
+/* CSS OF THE SUPERHERO CARD*/
+.superhero-card{
+    box-shadow: black 0px 7px 10px 2px; /*horizontal vertical blur radius*/
+    margin: 20px;
+    border-radius: 1rem;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.superhero-card img{
+    width: 100%; 
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 1rem;
+}
+
+.superhero-card i{
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    color: goldenrod;
+    z-index: 1000;
+}
+
+.superhero-card i:hover{
+    color: white;
+}
+
+
+.superhero-details{
+    transition: all 0.5s ease-in-out;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    /* font-size: large; */
+    border-radius: 1rem;
+}
+
+.superhero-details h1{
+    font-size: 16px;
+}
+
+.descriptionText{
+    text-align: center;
+    font-family: "Roboto","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    margin-top: 0%;
+    padding: 5px;
+}
+
+.superhero-details i{
+    position: absolute;
+    top: 90%;
+    left: 5%;
+}
+
+.superhero-card:hover .superhero-details{
+    color: white;
+    background-color: #14121278;
+}
+
+.superhero-details i:hover{
+    color: red;
+}
+
+
+
+.superhero-details-favourite{
+    transition: all 0.5s ease-in-out;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    /* font-size: large; */
+    border-radius: 1rem;
+}
+
+.superhero-details-favourite h1{
+    font-size: 16px;
+}
+
+.descriptionText{
+    text-align: center;
+    font-family: "Roboto","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    margin-top: 0%;
+    padding: 5px;
+}
+
+/* .superhero-details-favourite i{
+    position: absolute;
+    top: 90%;
+    left: 5%;
+} */
+
+.superhero-card:hover .superhero-details-favourite{
+    color: white;
+    background-color: #14121278;
+}
+
+
+
+
+
+/* CSS FOR IMAGE AND DESCRIPTION IN SUPERHERO PAGE*/
+.imageDescriptionContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+
+}
+
+.imageDescriptionContainer img{
+    /* object-fit: cover; */
+    /* height: 10%;
+    width: 20%; */
+    border-radius: 1rem;
+    margin: 10px;
+}
+
+.descriptionSuperHeroPage{
+    width:70%;
+    height: 20%;
+}
+
+.descriptionSuperHeroPage p{
+    padding: auto;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* CSS OF THE SUPERHERO CARD, STORIES CARD, EVENTS CARD, COMICS CARD, EVENTS CARD */
+.card{
+    box-shadow: black 0px 7px 10px 2px; /*horizontal vertical blur radius*/
+    margin: 20px;
+    border-radius: 1rem;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card img{
+    width: 100%; 
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 1rem;
+}
+
+
+.card i:hover{
+    color: white;
+}
+
+.card:hover .cloud{
+    visibility: visible;
+}
+
+.card:hover .card-details{
+    color: white;
+    background-color: #14121278;
+}
+
+
+.card-details{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    transition: all 0.5s ease-in-out;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    /* font-size: large; */
+    border-radius: 1rem;
+    
+}
+
+.card-details h1{
+    font-size: 16px;
+}
+
+
+
+.card-details i{
+    position: absolute;
+    top: 90%;
+    left: 5%;
+}
+
+
+.card-details i:hover{
+    color: goldenrod;
+}
+
+.card-description-text{
+    display: block;
+    text-align: center;
+    font-family: "Roboto","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    margin-top: 0%;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-overflow: ellipsis;
+    height: 60%;
+}
+
+
+/* CSS FOR SECTIONS IN SUPERHERO PAGE */
+.section{
+    width: 100%;
+}
+
+.section h3{
+    width: 100%;
+    color: white;
+    text-align: left;
+}
+
+
+
+
+/* CSS FOR STORIES IN SUPERHERO PAGE*/
+.stories-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* display: block;*/
+} 
+
+
+.stories-card{
+    box-shadow: #3d3232 0px 7px 10px 2px; /*horizontal vertical blur radius*/
+    margin: 20px;
+    /* border-radius: 1rem; */
+    width: 90%;
+    /* cursor: pointer; */
+    /* position: relative; */
+    color: white;
+}
+
+.stories-card h1{
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.stories-card p{
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.stories-details{
+    transition: all 0.5s ease-in-out;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    /* font-size: large; */
+    border-radius: 1rem;
+}
+
