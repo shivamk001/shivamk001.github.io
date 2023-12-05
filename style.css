@@ -1,0 +1,531 @@
+:root{
+    --color-blue: #2857a4;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#body-header{
+    background-image: url('https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg');
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 1.2rem;    
+}
+
+.horizontal-list{
+    list-style: none;
+    /* padding-top: 20px; */
+    padding-left: 0px;
+    margin: 0;
+}
+
+.horizontal-list li{
+    display: inline-block;
+    margin: 0 8px 8px 0;
+}
+
+.horizontal-list li a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.nav-menu li a{
+    transition: color 1s, border-bottom 4s;
+}
+
+.nav-menu li a:hover{
+    color: red;
+    border-bottom: 1px solid white;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+
+/* Names and social */
+
+.horizontal-list #socialbar{
+    padding-top: 0px;
+}
+
+#name-social-container{
+    margin-top: 10vh;
+    margin-bottom: auto;
+}
+
+#my-name{
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons li a i{
+    padding: 10px;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.social-icons li a i:hover{
+    box-shadow: 1px 1px 6px 4px white;
+}
+
+.text{
+    font-family: sans-serif;
+}
+
+/* SECTIONS */
+section{
+    width: 100%;
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+/* ALTERNATE SECTIONS HAVE DIFFERENT COLOR */
+section:nth-child(even){
+    background-color: #9e9b9b29;
+}
+
+section:nth-child(odd){
+    background-color: white;
+}
+
+
+/* About section */
+#about{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+#my-image{
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -7rem;
+}
+
+#my-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.text-highlight {
+    color: #2857a4;
+    font-weight: 600;
+}
+
+
+.about-para{
+    /* padding: 0px 100px; */
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+/* SKILLS SECTION */
+.section-heading{
+    text-align: center;
+    color: #2857a4;
+}
+.heading-div{
+    width: 80%;
+}
+
+.skills-display{
+    width: 80%;
+    height: auto;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+        /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    /* align-content: stretch; */
+    /* margin-bottom: 30px; */
+    /* align-content: center; */
+}
+
+.skill-progress{
+ width: 10rem;
+ height: 2rem;
+ background-color: lightgrey;
+ border-radius: 1.5rem;
+ border: 2px solid black;
+ margin: 2rem;
+}
+
+.skill-progress>div{
+    border-radius: 1.5rem 0rem 0rem 1.5rem;
+}
+
+.skill-inner{
+    display: flex; align-items: center;
+    justify-content: center;
+}
+.skill-name{
+    /* margin-top: auto; */
+    display: flex;
+    justify-content: center;
+}
+.skill-name span{
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    word-wrap: break-word;
+    /* margin-top: 5px;
+    margin-left: 10px; */
+    /* margin: 20px; */
+}
+
+
+
+/* Common Margin Classes */
+
+.mb75px {
+    margin-bottom: 40px;
+}
+
+
+
+/*common color classes */
+
+.text-highlight {
+    color: #2857a4;
+    font-weight: 600;
+
+}
+
+/* setting background-color */
+
+.mb-blue {
+    background-color: #2857a4;
+}
+
+.mb-orange {
+    background-color: #ec4d1c;
+}
+
+.mb-teal {
+    background-color: #0b8176;
+}
+
+.mb-light-purple {
+    background-color: #93738c;
+}
+
+
+/*Percentage Classes */
+
+.eighty-five-percent {
+    height: inherit;
+    width: 85%;
+}
+
+.eighty-percent {
+    height: inherit;
+    width: 80%;
+}
+
+.fifty-percent {
+    height: inherit;
+    width: 50%;
+}
+
+.twenty-five-percent{
+    height: inherit;
+    width: 25%;
+}
+
+.zero-percent{
+    height: inherit;
+    width: 0%;
+}
+
+.hundred-percent{
+    height: inherit;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* PROJECT SECTION */
+.portfolio-container{
+    width: 80%;
+    height: auto;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+        /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    align-content: space-around;
+    /* align-content: stretch; */
+    margin-bottom: 30px;
+}
+
+.project{
+    border: 2px solid black;
+    margin: 2rem;
+    background-image: url("https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png");
+    height: 250px;
+    /* width: 250px; */
+    max-width: 300px;
+    position: relative;
+}
+
+/* .project:hover{
+    background-color: #ec4d1c;
+    box-shadow: 0px 0px 50px 2px rgb(46, 184, 202);
+    transition: box-shadow 1s, background-color 1s;
+} */
+
+.project-details{
+    transition: all 0.5s ease-in-out;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    /* z-index: 2; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: large;
+    /* padding: 10px; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-name{
+    text-decoration: none;
+    color: transparent;
+    padding: 10px;
+}
+
+.project-name:visited{
+    color: transparent;
+}
+
+.github-link{
+    /* position: absolute;
+    top: 90%; */
+    /* left: 0%; */
+    align-self: center;
+    color: transparent;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.project:hover .project-details{
+    color: white;
+    background-color: #1a181878;
+}
+
+.project:hover .project-name{
+    color: white;
+}
+
+.project:hover .github-link{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACT SECTION */
+#contact{
+    background: linear-gradient(-45deg, blue, purple);
+   
+}
+
+.section-heading-contact{
+    text-align: center;
+    color: white;
+}
+
+.form-address{
+    width: 80%;
+    height: auto;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#form{
+    /* margin: 40px; */
+    width: 40%;
+    height: auto;
+}
+
+input
+{
+    background: transparent;
+    border-bottom: white;
+    border: none;
+    height: 2rem;
+    line-height: 4rem;
+    outline: none;
+    width: 100%;
+}
+
+textarea{
+    background: transparent;
+    border-bottom: white;
+    outline: none;
+}
+
+#contact-details{
+    /* margin: 40px; */
+    color: white;
+    width: 50%;
+    height: auto;
+}
+
+.input_div{
+    width: 100%;
+    border-bottom: 2px solid white;
+    padding-bottom:1px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EXPERIENCE SECTION */
+.timeline-container{
+    width: 80%;
+    position: relative;
+}
+
+.timeline-box{
+    position: relative;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    margin: 5px;
+}
+
+.timeline-box:nth-child(2n){
+    position: relative;
+    left: 53%;
+}
+
+
+.timeline-box h3{
+    color: var(--color-blue);
+    text-align: right;
+    margin: 5px;
+}
+.timeline-box h4{
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.timeline-box p{
+    text-align: justify;
+    margin: 5px;
+    color: rgb(102, 94, 94);
+}
+
+.timeline-box:nth-child(2n+1)::after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    position: absolute;
+    top: 25%;
+    right: -13.5%;
+    z-index: 1;
+}
+
+.timeline-box:nth-child(2n)::after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    position: absolute;
+    top: 25%;
+    left: -11%;
+    z-index: 1;
+}
+
+.timeline-content{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.vertical-border{
+    position: absolute;
+    height: 80%;
+    width: 0;
+    border: 3px dashed #0096fa6b;
+    bottom: 15%;
+    left: 50%;
+}
+.traveller{
+    position: sticky;
+    top: 25%;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+@media screen  and (max-width: 730px){
+    .timeline-content{
+        display: flex; 
+        flex-direction: column;
+    }
+}
