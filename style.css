@@ -379,7 +379,6 @@ section:nth-child(odd){
 /* CONTACT SECTION */
 #contact{
     background: linear-gradient(-45deg, blue, purple);
-   
 }
 
 .section-heading-contact{
@@ -388,7 +387,7 @@ section:nth-child(odd){
 }
 
 .form-address{
-    width: 80%;
+    width: 100%;
     height: auto;
     /* border: 2px solid green; */
     display: flex;
@@ -422,8 +421,16 @@ textarea{
 #contact-details{
     /* margin: 40px; */
     color: white;
-    width: 50%;
+    width: 100%;
     height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    gap: 20px;
+    flex-wrap: wrap;
+
 }
 
 .input_div{
